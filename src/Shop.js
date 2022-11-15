@@ -63,7 +63,7 @@ export default function Shop() {
   }
 
   return (
-    <>
+    <div className="min-h-screen bg-gray-50">
       <AddItem
         name={name}
         desc={desc}
@@ -74,10 +74,12 @@ export default function Shop() {
       />
       <div>
         {items.length === 0 && (
-          <p className="text-green-500">Добавьте первый товар</p>
+          <p className="justify-left flex max-w-md  text-gray-900 italic mx-auto">
+            Добавьте первый товар
+          </p>
         )}
       </div>
       <ItemsList items={items} onDeleteClick={handleDeleteClick} />
-    </>
+    </div>
   )
 }
